@@ -53,8 +53,8 @@ UINavigationControllerDelegate{
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
             let image = info[UIImagePickerControllerOriginalImage] as! UIImage
             MyImage.image = image
-            MyImage.isHidden = true
-            Bouton.isHidden = false
+            MyImage.isHidden = false
+            Bouton.isHidden = true
             dismiss(animated:true, completion: nil)
         }
 
