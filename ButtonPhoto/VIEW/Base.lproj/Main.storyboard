@@ -21,8 +21,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qIU-WK-zJQ">
                                 <rect key="frame" x="100" y="120" width="215" height="193"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1G6-69-buv">
-                                        <rect key="frame" x="0.0" y="0.0" width="46" height="193"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1G6-69-buv" userLabel="Bouton">
+                                        <rect key="frame" x="0.0" y="0.0" width="215" height="193"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button">
                                             <color key="titleColor" red="0.74117647060000003" green="0.18039215689999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -31,8 +31,8 @@
                                             <action selector="BoutonTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gAc-3i-1rK"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nfl-zD-Kdn" userLabel="MyImage">
-                                        <rect key="frame" x="46" y="0.0" width="169" height="193"/>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nfl-zD-Kdn" userLabel="MyImage">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="193"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>

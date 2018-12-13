@@ -14,6 +14,7 @@ UINavigationControllerDelegate{
 
     
     @IBOutlet weak var MyImage: UIImageView!
+  
     
     
     @IBAction func BoutonTouch(_ sender: AnyObject) {
@@ -45,7 +46,20 @@ UINavigationControllerDelegate{
             self.present(imagePicker, animated: true, completion: nil)
         default :
             break
+      
+            
         }
+        
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+            let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+            MyImage.image = image
+            MyImage.isHidden = true
+            Bouton.isHidden = false
+            dismiss(animated:true, completion: nil)
+        }
+
+      
+        
         //if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
           //  var imagePicker = UIImagePickerController()
         //imagePicker.delegate = self
@@ -58,7 +72,7 @@ UINavigationControllerDelegate{
     func Selection(pour typeSource: UIImagePickerController.SourceType) {
         let selecteur = UIImagePickerController()
         selecteur.sourceType = typeSource
-        selecteur.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        selecteur.delegate = self // as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
         present(selecteur, animated: true)
         
         
