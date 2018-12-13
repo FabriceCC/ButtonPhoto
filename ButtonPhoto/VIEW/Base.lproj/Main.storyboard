@@ -29,7 +29,6 @@
                                         </state>
                                         <connections>
                                             <action selector="BoutonTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gAc-3i-1rK"/>
-                                            <action selector="Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kkf-UQ-X98"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nfl-zD-Kdn" userLabel="MyImage">
@@ -51,7 +50,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="Button" destination="1G6-69-buv" id="miO-Hd-lzb"/>
                         <outlet property="MyImage" destination="nfl-zD-Kdn" id="rmH-Qj-o8R"/>
                     </connections>
                 </viewController>
