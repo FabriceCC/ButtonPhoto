@@ -50,6 +50,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="Bouton" destination="1G6-69-buv" id="t6K-nw-CdZ"/>
                         <outlet property="MyImage" destination="nfl-zD-Kdn" id="rmH-Qj-o8R"/>
                     </connections>
                 </viewController>

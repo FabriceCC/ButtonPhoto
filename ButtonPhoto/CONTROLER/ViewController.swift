@@ -11,12 +11,27 @@ import UIKit
 class ViewController: UIViewController,UIImagePickerControllerDelegate,
 UINavigationControllerDelegate{
 
-
+    @IBOutlet weak var Bouton: UIButton!
+    
     
     @IBOutlet weak var MyImage: UIImageView!
   
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        var photo = UIImage ()
+        
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            photo = image
+        }
+        else if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            photo = image
+        }
+        MyImage.image = photo
+        MyImage.isHidden = false
+        Bouton.isHidden = true
+        dismiss(animated:true, completion: nil)
+    }
     
-    
+
     @IBAction func BoutonTouch(_ sender: AnyObject) {
         let caméra = UIImagePickerController.isSourceTypeAvailable(.camera)
         let phototèque = UIImagePickerController.isSourceTypeAvailable(.photoLibrary)
@@ -37,6 +52,7 @@ UINavigationControllerDelegate{
             imagePicker.sourceType = .camera;
             imagePicker.allowsEditing = false
             self.present(imagePicker, animated: true, completion: nil)
+            imagePickerController(imagePicker, didFinishPickingMediaWithInfo: imagePicker.InfoKey)
             
         case (false, true) :
             var imagePicker = UIImagePickerController()
@@ -50,14 +66,6 @@ UINavigationControllerDelegate{
             
         }
         
-        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-            let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-            MyImage.image = image
-            MyImage.isHidden = false
-            Bouton.isHidden = true
-            dismiss(animated:true, completion: nil)
-        }
-
       
         
         //if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
