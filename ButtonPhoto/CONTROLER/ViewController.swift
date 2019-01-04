@@ -26,8 +26,9 @@ UINavigationControllerDelegate{
             photo = image
         }
         MyImage.image = photo
-        MyImage.isHidden = false
-        Bouton.isHidden = true
+        Bouton.setBackgroundImage(photo, for: .normal)
+        //MyImage.isHidden = false
+        //Bouton.isHidden = true
         dismiss(animated:true, completion: nil)
     }
     
@@ -52,7 +53,6 @@ UINavigationControllerDelegate{
             imagePicker.sourceType = .camera;
             imagePicker.allowsEditing = false
             self.present(imagePicker, animated: true, completion: nil)
-            imagePickerController(imagePicker, didFinishPickingMediaWithInfo: <#[UIImagePickerController.InfoKey : Any]#> )
             
         case (false, true) :
             var imagePicker = UIImagePickerController()
