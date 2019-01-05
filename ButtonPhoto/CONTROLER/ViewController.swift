@@ -32,7 +32,9 @@ UINavigationControllerDelegate{
         dismiss(animated:true, completion: nil)
     }
     
+    
 
+    
     @IBAction func BoutonTouch(_ sender: AnyObject) {
         let caméra = UIImagePickerController.isSourceTypeAvailable(.camera)
         let phototèque = UIImagePickerController.isSourceTypeAvailable(.photoLibrary)
@@ -48,14 +50,14 @@ UINavigationControllerDelegate{
             Choice.addAction(actionAnnuler)
             present(Choice, animated: true)
         case (true, false) :
-            var imagePicker = UIImagePickerController()
+            let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.sourceType = .camera;
             imagePicker.allowsEditing = false
             self.present(imagePicker, animated: true, completion: nil)
             
         case (false, true) :
-            var imagePicker = UIImagePickerController()
+            let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.sourceType = .photoLibrary;
             imagePicker.allowsEditing = true

@@ -23,7 +23,9 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>NSCameraUsageDescription</key>
-	<string>ButtonPhoto veut accèder à votre appareil photo... Pour prendre une photo</string>
+	<string>ButtonPhoto veut acceder à votre appareil photo...</string>
+	<key>NSMainStoryboardFile</key>
+	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
